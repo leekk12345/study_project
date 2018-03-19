@@ -23,6 +23,14 @@ public class BoardServiceImpl implements BoardService {
   @Override
   public void regist(BoardVO board) throws Exception {
     dao.create(board);
+    
+    String[] files = board.getFiles();
+	
+	if(files == null) return;
+	
+	for(String fileName : files) {
+		dao.addAttach(fileName);
+	}
   }
 
 
@@ -71,5 +79,10 @@ public class BoardServiceImpl implements BoardService {
 
     return dao.listSearchCount(cri);
   }
+  
+  @Override
+	public List<String> getAttach(Integer bno) throws Exception {
+		return dao.getAttach(bno);
+	}
 
 }

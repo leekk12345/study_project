@@ -11,6 +11,15 @@ public class BoardVO {
 	private Date regdate;
 	private int viewcnt;
 	private int replycnt;
+	private String[] files;
+	
+	public String[] getFiles() {
+		return files;
+	}
+
+	public void setFiles(String[] files) {
+		this.files = files;
+	}
 	
 	public int getReplycnt() {
 	  return replycnt;

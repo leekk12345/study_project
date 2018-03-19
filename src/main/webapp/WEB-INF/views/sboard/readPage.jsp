@@ -170,6 +170,7 @@
 {{/each}}
 </script>
 
+<script src= "https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.js"></script>
 <script>
 	//registerHelper : 데이터 처리에 사용할 기능이 helper기능에 없을 시 사용자가 새로운 기능을 추가하기 위해 사용하는 기능
 	Handlebars.registerHelper("prettifyDate", function(timeValue) {
@@ -236,7 +237,7 @@
 	
 	//새로운 댓글 등록 이벤트 처리 코드
 	$("#replyAddBtn").on("click",function(){
-		 
+		console.log("이벤");
 		 var replyerObj = $("#newReplyWriter");
 		 var replytextObj = $("#newReplyText");
 		 var replyer = replyerObj.val();
